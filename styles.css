@@ -995,3 +995,456 @@ a {
     }
 
 }
+
+/* ==========================================
+   ROHI RESPONSIVE OPTIMIZATION
+   Mobile + Tablet
+========================================== */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .site-nav .container-fluid {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .navbar-collapse {
+    margin-top: 12px;
+    padding: 16px 18px 20px;
+    background: rgba(10, 12, 15, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+    margin-inline: 0;
+  }
+
+  .hero-content {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(3.4rem, 8vw, 5.6rem);
+  }
+
+  .page-hero {
+    min-height: 68vh;
+    padding: 120px 0 72px;
+  }
+
+  .story-photo {
+    min-height: 440px;
+  }
+
+  .about-feature-copy {
+    left: 6vw;
+    right: 6vw;
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    line-height: 1.65;
+  }
+
+  .site-nav {
+    padding: 7px 0;
+  }
+
+  .site-nav .container-fluid {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.42rem 0.58rem;
+  }
+
+  .hero,
+  .page-hero {
+    min-height: 86svh;
+  }
+
+  .hero-home {
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .hero-content .row {
+    min-height: 86svh !important;
+    padding-top: 86px;
+    padding-bottom: 74px;
+  }
+
+  .hero-title {
+    margin: 0.75rem 0 1.4rem;
+    font-size: clamp(2.85rem, 13vw, 3.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+  }
+
+  .eyebrow {
+    font-size: 0.69rem;
+    letter-spacing: 0.16em;
+  }
+
+  .belief {
+    max-width: 100%;
+    padding-left: 1rem;
+    border-left-width: 2px;
+  }
+
+  .belief p {
+    font-size: 0.92rem;
+  }
+
+  .belief h2 {
+    font-size: clamp(1.05rem, 4.8vw, 1.3rem);
+    line-height: 1.55;
+  }
+
+  .hero-sub {
+    margin-top: 1.45rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero .btn-lg,
+  .cta .btn-lg {
+    padding: 0.72rem 1.3rem;
+    font-size: 0.96rem;
+  }
+
+  .scroll-cue {
+    bottom: 16px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .section-space {
+    padding: 72px 0;
+  }
+
+  .statement {
+    margin-top: 0.9rem;
+    font-size: clamp(2rem, 10vw, 2.75rem);
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+  }
+
+  .section-copy {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .image-story,
+  .image-story img {
+    min-height: 58svh;
+    height: 58svh;
+  }
+
+  .image-story img {
+    object-position: center;
+  }
+
+  .image-story-copy {
+    left: 22px;
+    right: 22px;
+    top: auto;
+    bottom: 38px;
+    max-width: none;
+    transform: none;
+  }
+
+  .image-story-copy h2 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    line-height: 1.06;
+  }
+
+  .image-story-copy p {
+    font-size: 0.98rem;
+  }
+
+  .split-story .row {
+    gap: 14px;
+  }
+
+  .story-photo {
+    min-height: 280px;
+    height: 56vw;
+    max-height: 380px;
+    border-radius: 24px;
+  }
+
+  .story-card {
+    min-height: 360px;
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
+  .story-card h2 {
+    font-size: clamp(2.1rem, 9vw, 2.75rem);
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .eco-card {
+    padding: 1.55rem;
+    border-radius: 22px;
+  }
+
+  .eco-card h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .cta h2 {
+    font-size: clamp(2.9rem, 14vw, 4.3rem);
+  }
+
+  .info-block,
+  .contact-form {
+    padding: 1.45rem;
+    border-radius: 22px;
+  }
+
+  .site-footer {
+    padding: 58px 0 24px;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-hero,
+  .about-hero-content {
+    min-height: 86svh;
+  }
+
+  .about-hero-image {
+    object-position: 58% center;
+  }
+
+  .about-hero-content {
+    padding-top: 88px;
+    padding-bottom: 52px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 3.65rem);
+    line-height: 1.08;
+  }
+
+  .about-hero-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-scroll-button {
+    margin-top: 24px;
+    font-size: 0.95rem;
+  }
+
+  .about-story-section,
+  .about-visual-grid-section,
+  .about-difference-section {
+    padding: 76px 0;
+  }
+
+  .about-image-frame {
+    border-radius: 24px;
+  }
+
+  .about-image-frame img {
+    height: 330px;
+  }
+
+  .image-label {
+    left: 16px;
+    bottom: 16px;
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .about-section-title,
+  .about-heading h2,
+  .about-difference-section h2,
+  .about-ending h2 {
+    font-size: clamp(2.35rem, 10.5vw, 3.35rem);
+    line-height: 1.12;
+  }
+
+  .about-copy {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .about-feature-image {
+    height: auto;
+    min-height: 520px;
+  }
+
+  .about-feature-image > img {
+    min-height: 520px;
+  }
+
+  .about-feature-copy {
+    left: 22px;
+    right: 22px;
+    max-width: none;
+  }
+
+  .about-feature-copy h2 {
+    font-size: clamp(2.4rem, 11vw, 3.35rem);
+  }
+
+  .about-feature-copy p {
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-heading {
+    margin-bottom: 36px;
+  }
+
+  .about-visual-grid {
+    gap: 16px;
+  }
+
+  .about-visual-card {
+    min-height: 390px;
+    border-radius: 24px;
+  }
+
+  .about-card-copy {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .about-card-copy h3 {
+    font-size: 1.6rem;
+  }
+
+  .about-card-copy p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .about-difference-text {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .about-strength-grid {
+    margin-top: 48px;
+  }
+
+  .about-strength {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  .about-strength h3 {
+    margin-top: 48px;
+  }
+
+  .about-ending {
+    padding: 82px 0;
+  }
+
+  .about-ending > .container > p:not(.about-kicker) {
+    font-size: 1.08rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-content {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .belief h2 {
+    font-size: 1rem;
+  }
+
+  .hero .d-flex.gap-3 {
+    gap: 10px !important;
+  }
+
+  .hero .btn-lg {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+    font-size: 0.9rem;
+  }
+
+  .statement,
+  .section-heading h2 {
+    font-size: 2.05rem;
+  }
+
+  .image-story-copy h2 {
+    font-size: 2.15rem;
+  }
+
+  .about-image-frame img {
+    height: 290px;
+  }
+
+  .about-visual-card {
+    min-height: 350px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
