@@ -2330,24 +2330,80 @@ iframe {
     font-size: 21px;
   }
 
-  .ifilm-cta-content {
-    padding-top: 90px;
-    padding-bottom: 80px;
-  }
+  /* Innovation 页面底部 CTA：与首页渐变底色统一 */
 
-  .ifilm-cta h2 {
-    margin-top: 65px;
-    font-size: 49px;
-  }
+.ifilm .ifilm-cta {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      115deg,
+      #d97961 0%,
+      #bd7b83 35%,
+      #9785a7 65%,
+      #6f88d2 100%
+    );
+}
 
-  .ifilm-cta-bottom {
-    margin-top: 55px;
-    align-items: flex-start;
-    flex-direction: column;
-  }
+.ifilm .ifilm-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 18% 25%,
+      rgba(255, 143, 108, 0.32),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 82% 70%,
+      rgba(103, 139, 232, 0.34),
+      transparent 40%
+    );
+}
 
-  .ifilm-cta-bottom p {
-    font-size: 15px;
+.ifilm .ifilm-cta-glow {
+  display: none;
+}
+
+.ifilm .ifilm-cta-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ifilm .ifilm-cta .ifilm-section-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ifilm .ifilm-cta .ifilm-section-label span:first-child {
+  color: #ffffff;
+}
+
+.ifilm .ifilm-cta .ifilm-section-label::after {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.ifilm .ifilm-cta h2 {
+  color: #ffffff;
+}
+
+.ifilm .ifilm-cta-bottom p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ifilm .ifilm-cta .ifilm-button-dark {
+  color: #11151a;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.ifilm .ifilm-cta .ifilm-button-dark:hover {
+  color: #ffffff;
+  background: rgba(17, 21, 26, 0.92);
+  border-color: rgba(17, 21, 26, 0.92);
+
   }
 }
 
