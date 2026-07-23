@@ -30,45 +30,66 @@ if (contactForm) {
     contactForm.reset();
   });
 }
-const innovationVideo =
-  document.querySelector("#innovationHeroVideo");
+/* ROHI AI FILM / INNOVATION PAGE */
 
-const innovationSoundButton =
-  document.querySelector("#innovationSoundButton");
+document.addEventListener("DOMContentLoaded", function () {
+  const filmPage = document.querySelector(".ifilm");
 
-const innovationSoundIcon =
-  document.querySelector("#innovationSoundIcon");
+  if (!filmPage) {
+    return;
+  }
 
-const innovationSoundText =
-  document.querySelector("#innovationSoundText");
+  const revealItems = filmPage.querySelectorAll(".ifilm-reveal");
 
-if (
-  innovationVideo &&
-  innovationSoundButton &&
-  innovationSoundIcon &&
-  innovationSoundText
-) {
-  innovationSoundButton.addEventListener("click", async () => {
-    if (innovationVideo.muted) {
-      innovationVideo.muted = false;
-      innovationVideo.volume = 1;
-
-      try {
-        await innovationVideo.play();
-
-        innovationSoundIcon.textContent = "🔊";
-        innovationSoundText.textContent = "关闭声音";
-      } catch (error) {
-        innovationVideo.muted = true;
-
-        innovationSoundIcon.textContent = "🔇";
-        innovationSoundText.textContent = "开启声音";
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("ifilm-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
       }
-    } else {
-      innovationVideo.muted = true;
+    );
 
-      innovationSoundIcon.textContent = "🔇";
-      innovationSoundText.textContent = "开启声音";
-    }
-  });
-}
+    revealItems.forEach(function (item) {
+      revealObserver.observe(item);
+    });
+  } else {
+    revealItems.forEach(function (item) {
+      item.classList.add("ifilm-visible");
+    });
+  }
+
+  const heroVideo = document.getElementById("ifilmHeroVideo");
+  const soundButton = document.getElementById("ifilmSoundButton");
+  const soundIcon = document.getElementById("ifilmSoundIcon");
+  const soundText = document.getElementById("ifilmSoundText");
+
+  if (heroVideo && soundButton && soundIcon && soundText) {
+    heroVideo.muted = true;
+
+    soundButton.addEventListener("click", function () {
+      if (heroVideo.muted) {
+        heroVideo.muted = false;
+        heroVideo.volume = 1;
+        heroVideo.play();
+
+        soundIcon.textContent = "🔊";
+        soundText.textContent = "关闭声音";
+        soundButton.setAttribute("aria-pressed", "true");
+      } else {
+        heroVideo.muted = true;
+
+        soundIcon.textContent = "🔇";
+        soundText.textContent = "开启声音";
+        soundButton.setAttribute("aria-pressed", "false");
+      }
+    });
+  }
+});
