@@ -1446,67 +1446,24 @@ iframe {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}/* ==========================================
-   INNOVATION — AI FILM
-   完整页面样式
-========================================== */
-
-.innovation-main {
-  --inno-bg: #06080b;
-  --inno-panel: #0d1117;
-  --inno-white: #f6f7f8;
-  --inno-muted: rgba(246, 247, 248, 0.6);
-  --inno-line: rgba(255, 255, 255, 0.13);
-  --inno-orange: #ff845c;
-  --inno-violet: #768bff;
-
-  overflow: hidden;
-  color: var(--inno-white);
-  background: var(--inno-bg);
-}
-
-
-/* ==========================================
-   通用标题
-========================================== */
-
-.innovation-kicker,
-.innovation-section-index {
-  margin-bottom: 22px;
-  color: rgba(255, 255, 255, 0.48);
-  font-size: 0.73rem;
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-/* =========================================================
+}/* =========================================================
    ROHI AI FILM / INNOVATION PAGE
-   仅作用于 .ifilm，不修改导航栏和页脚
+   只影响 innovation.html 的 .ifilm
 ========================================================= */
 
 .ifilm {
-  --ifilm-bg: #080c10;
-  --ifilm-bg-soft: #0d1218;
-  --ifilm-panel: #111820;
-  --ifilm-text: #f5f7f8;
-  --ifilm-muted: #a8b0b8;
-  --ifilm-line: rgba(255, 255, 255, 0.14);
-  --ifilm-accent: #ff775a;
-  --ifilm-blue: #8fcfff;
-  --ifilm-max: 1440px;
-
+  --film-bg: #080d12;
+  --film-soft: #0d1319;
+  --film-text: #f7f8fa;
+  --film-muted: #aab2ba;
+  --film-line: rgba(255, 255, 255, 0.14);
+  --film-orange: #ff765c;
   width: 100%;
   overflow: hidden;
-  color: var(--ifilm-text);
-  background: var(--ifilm-bg);
-  font-family:
-    Inter,
-    "Helvetica Neue",
-    Arial,
-    "PingFang SC",
-    "Microsoft YaHei",
-    sans-serif;
+  color: var(--film-text);
+  background: var(--film-bg);
+  font-family: Inter, "Helvetica Neue", Arial, "PingFang SC",
+    "Microsoft YaHei", sans-serif;
 }
 
 .ifilm *,
@@ -1526,44 +1483,39 @@ iframe {
   text-decoration: none;
 }
 
-.ifilm button {
-  font: inherit;
-}
-
 .ifilm-container {
-  width: min(calc(100% - 96px), var(--ifilm-max));
+  width: min(calc(100% - 96px), 1440px);
   margin: 0 auto;
 }
 
-/* 通用标签 */
+/* 通用标题 */
 
 .ifilm-section-label {
   display: flex;
   align-items: center;
   gap: 14px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.58);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  letter-spacing: 0.22em;
 }
 
 .ifilm-section-label span:first-child {
-  color: var(--ifilm-accent);
+  color: var(--film-orange);
 }
 
 .ifilm-section-label::after {
-  width: 72px;
+  width: 70px;
   height: 1px;
-  margin-left: 5px;
+  margin-left: 4px;
   content: "";
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .ifilm-button {
   display: inline-flex;
   min-height: 52px;
-  padding: 0 24px;
+  padding: 0 25px;
   align-items: center;
   justify-content: center;
   gap: 24px;
@@ -1571,11 +1523,7 @@ iframe {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .ifilm-button:hover {
@@ -1583,21 +1531,7 @@ iframe {
 }
 
 .ifilm-button-light {
-  color: #090d11;
-  background: #ffffff;
-}
-
-.ifilm-button-light:hover {
-  background: var(--ifilm-accent);
-}
-
-.ifilm-button-dark {
-  color: #ffffff;
-  background: #090d11;
-}
-
-.ifilm-button-dark:hover {
-  color: #090d11;
+  color: #080d12;
   background: #ffffff;
 }
 
@@ -1610,13 +1544,14 @@ iframe {
   align-items: flex-end;
   isolation: isolate;
   overflow: hidden;
-  background: #050709;
+  background: #05080b;
 }
 
 .ifilm-hero-video {
   position: absolute;
   z-index: -3;
   inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -1629,64 +1564,63 @@ iframe {
   background:
     linear-gradient(
       90deg,
-      rgba(3, 5, 8, 0.92) 0%,
-      rgba(3, 5, 8, 0.61) 46%,
-      rgba(3, 5, 8, 0.2) 76%,
-      rgba(3, 5, 8, 0.4) 100%
+      rgba(3, 6, 9, 0.94) 0%,
+      rgba(3, 6, 9, 0.62) 48%,
+      rgba(3, 6, 9, 0.2) 80%
     ),
     linear-gradient(
       0deg,
-      rgba(3, 5, 8, 0.86) 0%,
-      transparent 52%,
-      rgba(3, 5, 8, 0.3) 100%
+      rgba(3, 6, 9, 0.88) 0%,
+      transparent 55%
     );
 }
 
 .ifilm-hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 180px;
+  padding-top: 160px;
   padding-bottom: 120px;
 }
 
 .ifilm-eyebrow {
-  margin: 0 0 26px;
+  margin: 0 0 24px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.26em;
 }
 
 .ifilm-hero h1 {
-  max-width: 940px;
+  max-width: 960px;
   margin: 0;
-  font-size: clamp(54px, 7.4vw, 116px);
+  color: #ffffff;
+  font-size: clamp(54px, 7vw, 106px);
   font-weight: 600;
-  line-height: 0.97;
-  letter-spacing: -0.065em;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
 }
 
 .ifilm-hero h1 span {
   color: transparent;
-  background:
-    linear-gradient(110deg, #ffffff 8%, #9dd4ff 54%, #ff8a6e 100%);
+  background: linear-gradient(110deg, #ffffff, #9bd2ff, #ff8d72);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
 .ifilm-hero-description {
-  max-width: 610px;
-  margin: 34px 0 0;
-  color: rgba(255, 255, 255, 0.72);
+  max-width: 620px;
+  margin: 32px 0 0;
+  color: rgba(255, 255, 255, 0.76);
   font-size: 18px;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 .ifilm-hero-actions {
   display: flex;
-  margin-top: 42px;
+  margin-top: 38px;
   align-items: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .ifilm-sound-button {
@@ -1696,134 +1630,113 @@ iframe {
   align-items: center;
   gap: 10px;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
   cursor: pointer;
-  background: rgba(4, 7, 10, 0.38);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition:
-    border-color 0.25s ease,
-    background-color 0.25s ease;
-}
-
-.ifilm-sound-button:hover {
-  border-color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .ifilm-hero-meta {
   position: absolute;
   right: 48px;
-  bottom: 38px;
+  bottom: 35px;
   left: 48px;
   z-index: 3;
   display: flex;
   justify-content: space-between;
-  color: rgba(255, 255, 255, 0.46);
+  color: rgba(255, 255, 255, 0.48);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 }
 
 /* 第二屏：介绍 */
 
 .ifilm-intro {
-  padding: 150px 0;
+  padding: 135px 0;
   background:
     radial-gradient(
       circle at 85% 15%,
-      rgba(68, 143, 197, 0.12),
-      transparent 35%
+      rgba(76, 149, 201, 0.13),
+      transparent 34%
     ),
-    var(--ifilm-bg);
+    var(--film-bg);
 }
 
-.ifilm-intro-grid {
+.ifilm-intro-grid,
+.ifilm-section-heading {
   display: grid;
-  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.8fr);
-  gap: 80px;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 70px;
 }
 
-.ifilm-intro-copy h2 {
-  max-width: 940px;
+.ifilm-intro-copy h2,
+.ifilm-section-heading h2 {
+  max-width: 930px;
   margin: 0;
-  font-size: clamp(42px, 5.3vw, 78px);
+  color: #ffffff;
+  font-size: clamp(40px, 5vw, 72px);
   font-weight: 500;
   line-height: 1.13;
   letter-spacing: -0.05em;
 }
 
 .ifilm-intro-copy > p {
-  max-width: 720px;
-  margin: 44px 0 0 auto;
-  color: var(--ifilm-muted);
-  font-size: 18px;
-  line-height: 1.95;
+  max-width: 730px;
+  margin: 38px 0 0;
+  color: var(--film-muted);
+  font-size: 17px;
+  line-height: 1.9;
 }
 
-/* 第三屏：服务卡片 */
+/* 第三屏：服务 */
 
 .ifilm-capabilities {
-  padding: 150px 0;
-  border-top: 1px solid var(--ifilm-line);
-  background: var(--ifilm-bg-soft);
+  padding: 135px 0;
+  border-top: 1px solid var(--film-line);
+  background: var(--film-soft);
 }
 
 .ifilm-section-heading {
-  display: grid;
-  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.8fr);
-  margin-bottom: 72px;
-  gap: 80px;
-}
-
-.ifilm-section-heading h2 {
-  margin: 0;
-  font-size: clamp(38px, 4.4vw, 66px);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.045em;
+  margin-bottom: 65px;
 }
 
 .ifilm-section-heading p {
   max-width: 720px;
-  margin: 25px 0 0;
-  color: var(--ifilm-muted);
+  margin: 24px 0 0;
+  color: var(--film-muted);
   font-size: 17px;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 .ifilm-service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: minmax(520px, 42vw);
   gap: 18px;
 }
 
 .ifilm-service-card {
   position: relative;
-  min-height: 520px;
+  min-height: 570px;
   isolation: isolate;
   overflow: hidden;
-  border: 1px solid var(--ifilm-line);
+  border: 1px solid var(--film-line);
   border-radius: 6px;
-  background: var(--ifilm-panel);
+  background: #111820;
 }
 
 .ifilm-service-card img {
   position: absolute;
   z-index: -3;
   inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  transition:
-    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
-    filter 0.8s ease;
+  transition: transform 0.7s ease;
 }
 
 .ifilm-service-card:hover img {
-  transform: scale(1.045);
-  filter: saturate(1.08);
+  transform: scale(1.04);
 }
 
 .ifilm-card-shade {
@@ -1833,9 +1746,9 @@ iframe {
   background:
     linear-gradient(
       180deg,
-      rgba(4, 7, 10, 0.08) 15%,
-      rgba(4, 7, 10, 0.22) 45%,
-      rgba(4, 7, 10, 0.94) 100%
+      rgba(4, 7, 10, 0.05) 15%,
+      rgba(4, 7, 10, 0.25) 48%,
+      rgba(4, 7, 10, 0.96) 100%
     );
 }
 
@@ -1844,52 +1757,51 @@ iframe {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 44px;
+  padding: 40px;
 }
 
 .ifilm-card-number {
   position: absolute;
-  right: 38px;
-  bottom: 38px;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 72px;
+  right: 34px;
+  bottom: 33px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 64px;
   font-weight: 300;
-  line-height: 1;
 }
 
 .ifilm-card-en {
-  margin: 0 0 12px;
-  color: rgba(255, 255, 255, 0.56);
+  margin: 0 0 11px;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
 }
 
 .ifilm-card-content h3 {
   margin: 0;
-  font-size: clamp(30px, 3.2vw, 50px);
+  color: #ffffff;
+  font-size: clamp(30px, 3vw, 47px);
   font-weight: 500;
-  letter-spacing: -0.04em;
 }
 
 .ifilm-card-content > p:last-child {
-  max-width: 560px;
-  margin: 18px 100px 0 0;
-  color: rgba(255, 255, 255, 0.72);
+  max-width: 530px;
+  margin: 17px 90px 0 0;
+  color: rgba(255, 255, 255, 0.74);
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
 /* 第四屏 */
 
 .ifilm-feature {
   position: relative;
-  min-height: 850px;
+  min-height: 800px;
   display: flex;
   align-items: center;
   isolation: isolate;
   overflow: hidden;
-  background: #090d11;
+  background: #080d12;
 }
 
 .ifilm-feature-image,
@@ -1907,7 +1819,6 @@ iframe {
 
 .ifilm-feature-image img {
   object-fit: cover;
-  object-position: center;
 }
 
 .ifilm-feature-shade {
@@ -1915,171 +1826,183 @@ iframe {
   background:
     linear-gradient(
       90deg,
-      rgba(5, 8, 11, 0.97) 0%,
-      rgba(5, 8, 11, 0.8) 43%,
-      rgba(5, 8, 11, 0.24) 78%,
-      rgba(5, 8, 11, 0.38) 100%
+      rgba(5, 8, 11, 0.96),
+      rgba(5, 8, 11, 0.76) 45%,
+      rgba(5, 8, 11, 0.25) 82%
     );
 }
 
 .ifilm-feature-content {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .ifilm-feature-copy {
   max-width: 720px;
-  margin-top: 110px;
+  margin-top: 100px;
 }
 
 .ifilm-feature-kicker {
-  margin: 0 0 22px;
-  color: var(--ifilm-blue);
+  margin: 0 0 20px;
+  color: #9bd4ff;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
 }
 
 .ifilm-feature-copy h2 {
   margin: 0;
-  font-size: clamp(46px, 6vw, 88px);
+  color: #ffffff;
+  font-size: clamp(44px, 5.5vw, 82px);
   font-weight: 500;
-  line-height: 1.06;
+  line-height: 1.07;
   letter-spacing: -0.055em;
 }
 
 .ifilm-feature-copy > p:last-child {
-  max-width: 660px;
-  margin: 34px 0 0;
-  color: rgba(255, 255, 255, 0.7);
+  max-width: 650px;
+  margin: 32px 0 0;
+  color: rgba(255, 255, 255, 0.72);
   font-size: 17px;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 /* 第五屏：流程 */
 
 .ifilm-workflow {
-  padding: 150px 0;
-  border-top: 1px solid var(--ifilm-line);
-  background: var(--ifilm-bg);
+  padding: 135px 0;
+  background: var(--film-bg);
 }
 
 .ifilm-workflow-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 110px;
-}
-
-.ifilm-workflow-intro {
-  position: sticky;
-  top: 130px;
-  align-self: start;
+  gap: 100px;
 }
 
 .ifilm-workflow-intro h2 {
-  margin: 44px 0 0;
-  font-size: clamp(40px, 4.5vw, 68px);
+  margin: 42px 0 0;
+  color: #ffffff;
+  font-size: clamp(40px, 4.3vw, 64px);
   font-weight: 500;
-  line-height: 1.13;
+  line-height: 1.14;
   letter-spacing: -0.05em;
 }
 
 .ifilm-workflow-intro > p {
-  max-width: 520px;
-  margin: 30px 0 0;
-  color: var(--ifilm-muted);
+  max-width: 510px;
+  margin: 28px 0 0;
+  color: var(--film-muted);
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 .ifilm-workflow-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--ifilm-line);
+  border-top: 1px solid var(--film-line);
 }
 
 .ifilm-workflow-list li {
   display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
-  padding: 36px 0;
-  gap: 20px;
-  border-bottom: 1px solid var(--ifilm-line);
+  grid-template-columns: 70px minmax(0, 1fr);
+  padding: 32px 0;
+  gap: 15px;
+  border-bottom: 1px solid var(--film-line);
 }
 
 .ifilm-step-number {
-  padding-top: 6px;
-  color: var(--ifilm-accent);
+  padding-top: 5px;
+  color: var(--film-orange);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.16em;
 }
 
 .ifilm-workflow-list h3 {
   margin: 0;
-  font-size: 25px;
+  color: #ffffff;
+  font-size: 24px;
   font-weight: 500;
 }
 
 .ifilm-workflow-list p {
-  margin: 12px 0 0;
-  color: var(--ifilm-muted);
+  margin: 10px 0 0;
+  color: var(--film-muted);
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
-/* 第六屏：CTA */
+/* 第六屏：渐变 CTA */
 
 .ifilm-cta {
   position: relative;
   overflow: hidden;
-  color: #0b1015;
-  background: #f0ebe3;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      115deg,
+      #d97961 0%,
+      #bd7b83 36%,
+      #9884a6 66%,
+      #7088d2 100%
+    );
+}
+
+.ifilm-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 152, 115, 0.28),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 85% 72%,
+      rgba(94, 134, 231, 0.3),
+      transparent 42%
+    );
 }
 
 .ifilm-cta-glow {
-  position: absolute;
-  top: -300px;
-  right: -180px;
-  width: 700px;
-  height: 700px;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 119, 90, 0.52),
-      rgba(119, 190, 239, 0.2) 46%,
-      transparent 72%
-    );
-  filter: blur(10px);
+  display: none;
 }
 
 .ifilm-cta-content {
   position: relative;
-  padding-top: 140px;
-  padding-bottom: 120px;
+  z-index: 2;
+  padding-top: 120px;
+  padding-bottom: 110px;
 }
 
 .ifilm-cta .ifilm-section-label {
-  color: rgba(11, 16, 21, 0.58);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ifilm-cta .ifilm-section-label span:first-child {
+  color: #ffffff;
 }
 
 .ifilm-cta .ifilm-section-label::after {
-  background: rgba(11, 16, 21, 0.3);
+  background: rgba(255, 255, 255, 0.44);
 }
 
 .ifilm-cta h2 {
   max-width: 1050px;
-  margin: 90px 0 0;
-  font-size: clamp(52px, 7vw, 104px);
+  margin: 70px 0 0;
+  color: #ffffff;
+  font-size: clamp(48px, 6vw, 88px);
   font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -0.065em;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
 }
 
 .ifilm-cta-bottom {
   display: flex;
-  margin-top: 80px;
+  margin-top: 65px;
   align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
@@ -2088,74 +2011,51 @@ iframe {
 .ifilm-cta-bottom p {
   max-width: 600px;
   margin: 0;
-  color: rgba(11, 16, 21, 0.67);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 17px;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
-/* 滚动动画 */
+.ifilm-cta .ifilm-button-dark {
+  color: #101419;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.ifilm-cta .ifilm-button-dark:hover {
+  color: #ffffff;
+  background: #101419;
+}
+
+/* 内容默认显示，避免 JS 出错时页面变空 */
 
 .ifilm-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.75s ease,
-    transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.ifilm-reveal.ifilm-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* 平板 */
 
 @media (max-width: 991px) {
   .ifilm-container {
-    width: min(calc(100% - 48px), var(--ifilm-max));
-  }
-
-  .ifilm-hero {
-    min-height: 780px;
-  }
-
-  .ifilm-hero-content {
-    padding-top: 150px;
-    padding-bottom: 110px;
-  }
-
-  .ifilm-hero-meta {
-    right: 24px;
-    left: 24px;
+    width: calc(100% - 48px);
   }
 
   .ifilm-intro-grid,
   .ifilm-section-heading,
   .ifilm-workflow-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 42px;
   }
 
   .ifilm-intro,
   .ifilm-capabilities,
   .ifilm-workflow {
-    padding: 110px 0;
+    padding: 100px 0;
   }
 
-  .ifilm-intro-copy > p {
-    margin-left: 0;
-  }
-
-  .ifilm-service-grid {
-    grid-auto-rows: 570px;
-  }
-
-  .ifilm-feature {
-    min-height: 760px;
-  }
-
-  .ifilm-workflow-intro {
-    position: static;
+  .ifilm-service-card {
+    min-height: 520px;
   }
 }
 
@@ -2170,54 +2070,22 @@ iframe {
     min-height: calc(100svh - 70px);
   }
 
-  .ifilm-hero-video {
-    object-position: center;
-  }
-
-  .ifilm-hero-overlay {
-    background:
-      linear-gradient(
-        0deg,
-        rgba(3, 5, 8, 0.96) 0%,
-        rgba(3, 5, 8, 0.54) 58%,
-        rgba(3, 5, 8, 0.3) 100%
-      );
-  }
-
   .ifilm-hero-content {
-    padding-top: 140px;
-    padding-bottom: 105px;
-  }
-
-  .ifilm-eyebrow {
-    margin-bottom: 20px;
-    font-size: 10px;
+    padding-top: 130px;
+    padding-bottom: 100px;
   }
 
   .ifilm-hero h1 {
-    font-size: clamp(49px, 14.5vw, 72px);
-    line-height: 1;
+    font-size: clamp(47px, 14vw, 68px);
   }
 
   .ifilm-hero-description {
-    margin-top: 25px;
     font-size: 15px;
-    line-height: 1.75;
-  }
-
-  .ifilm-hero-actions {
-    margin-top: 30px;
-    flex-wrap: wrap;
-  }
-
-  .ifilm-button,
-  .ifilm-sound-button {
-    min-height: 48px;
   }
 
   .ifilm-hero-meta {
     right: 18px;
-    bottom: 22px;
+    bottom: 20px;
     left: 18px;
   }
 
@@ -2228,198 +2096,96 @@ iframe {
   .ifilm-intro,
   .ifilm-capabilities,
   .ifilm-workflow {
-    padding: 82px 0;
-  }
-
-  .ifilm-section-label {
-    font-size: 10px;
-  }
-
-  .ifilm-intro-grid,
-  .ifilm-section-heading,
-  .ifilm-workflow-grid {
-    gap: 38px;
+    padding: 78px 0;
   }
 
   .ifilm-intro-copy h2,
   .ifilm-section-heading h2 {
-    font-size: 39px;
+    font-size: 38px;
   }
 
   .ifilm-intro-copy > p,
   .ifilm-section-heading p {
-    margin-top: 25px;
     font-size: 15px;
-    line-height: 1.8;
-  }
-
-  .ifilm-section-heading {
-    margin-bottom: 42px;
   }
 
   .ifilm-service-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     gap: 14px;
   }
 
   .ifilm-service-card {
-    min-height: 500px;
+    min-height: 490px;
   }
 
   .ifilm-card-content {
-    padding: 28px;
-  }
-
-  .ifilm-card-number {
-    right: 24px;
-    bottom: 25px;
-    font-size: 54px;
+    padding: 27px;
   }
 
   .ifilm-card-content h3 {
-    font-size: 36px;
+    font-size: 35px;
+  }
+
+  .ifilm-card-number {
+    right: 22px;
+    bottom: 24px;
+    font-size: 50px;
   }
 
   .ifilm-card-content > p:last-child {
-    margin-right: 55px;
+    margin-right: 48px;
     font-size: 14px;
   }
 
   .ifilm-feature {
-    min-height: 720px;
-  }
-
-  .ifilm-feature-image img {
-    object-position: 62% center;
+    min-height: 700px;
   }
 
   .ifilm-feature-shade {
     background:
       linear-gradient(
         0deg,
-        rgba(5, 8, 11, 0.98) 0%,
-        rgba(5, 8, 11, 0.68) 62%,
-        rgba(5, 8, 11, 0.22) 100%
+        rgba(5, 8, 11, 0.98),
+        rgba(5, 8, 11, 0.6) 65%,
+        rgba(5, 8, 11, 0.2)
       );
   }
 
   .ifilm-feature-content {
-    padding-top: 90px;
-    padding-bottom: 75px;
+    padding-top: 75px;
+    padding-bottom: 70px;
   }
 
   .ifilm-feature-copy {
-    margin-top: 230px;
+    margin-top: 220px;
   }
 
   .ifilm-feature-copy h2 {
-    font-size: 46px;
-  }
-
-  .ifilm-feature-copy > p:last-child {
-    font-size: 15px;
+    font-size: 44px;
   }
 
   .ifilm-workflow-list li {
-    grid-template-columns: 48px minmax(0, 1fr);
-    padding: 28px 0;
+    grid-template-columns: 45px minmax(0, 1fr);
   }
 
-  .ifilm-workflow-list h3 {
-    font-size: 21px;
+  .ifilm-cta-content {
+    padding-top: 85px;
+    padding-bottom: 75px;
   }
 
-  /* Innovation 页面底部 CTA：与首页渐变底色统一 */
-
-.ifilm .ifilm-cta {
-  position: relative;
-  overflow: hidden;
-  color: #ffffff;
-  background:
-    linear-gradient(
-      115deg,
-      #d97961 0%,
-      #bd7b83 35%,
-      #9785a7 65%,
-      #6f88d2 100%
-    );
-}
-
-.ifilm .ifilm-cta::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  pointer-events: none;
-  background:
-    radial-gradient(
-      circle at 18% 25%,
-      rgba(255, 143, 108, 0.32),
-      transparent 36%
-    ),
-    radial-gradient(
-      circle at 82% 70%,
-      rgba(103, 139, 232, 0.34),
-      transparent 40%
-    );
-}
-
-.ifilm .ifilm-cta-glow {
-  display: none;
-}
-
-.ifilm .ifilm-cta-content {
-  position: relative;
-  z-index: 2;
-}
-
-.ifilm .ifilm-cta .ifilm-section-label {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.ifilm .ifilm-cta .ifilm-section-label span:first-child {
-  color: #ffffff;
-}
-
-.ifilm .ifilm-cta .ifilm-section-label::after {
-  background: rgba(255, 255, 255, 0.42);
-}
-
-.ifilm .ifilm-cta h2 {
-  color: #ffffff;
-}
-
-.ifilm .ifilm-cta-bottom p {
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.ifilm .ifilm-cta .ifilm-button-dark {
-  color: #11151a;
-  background: #ffffff;
-  border-color: #ffffff;
-}
-
-.ifilm .ifilm-cta .ifilm-button-dark:hover {
-  color: #ffffff;
-  background: rgba(17, 21, 26, 0.92);
-  border-color: rgba(17, 21, 26, 0.92);
-
-  }
-}
-
-/* 用户关闭动态效果时取消动画 */
-
-@media (prefers-reduced-motion: reduce) {
-  .ifilm *,
-  .ifilm *::before,
-  .ifilm *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+  .ifilm-cta h2 {
+    margin-top: 55px;
+    font-size: 46px;
+    line-height: 1.08;
   }
 
-  .ifilm-reveal {
-    opacity: 1;
-    transform: none;
+  .ifilm-cta-bottom {
+    margin-top: 45px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ifilm-cta-bottom p {
+    font-size: 15px;
   }
 }
