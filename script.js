@@ -30,3 +30,45 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+const innovationVideo =
+  document.querySelector("#innovationHeroVideo");
+
+const innovationSoundButton =
+  document.querySelector("#innovationSoundButton");
+
+const innovationSoundIcon =
+  document.querySelector("#innovationSoundIcon");
+
+const innovationSoundText =
+  document.querySelector("#innovationSoundText");
+
+if (
+  innovationVideo &&
+  innovationSoundButton &&
+  innovationSoundIcon &&
+  innovationSoundText
+) {
+  innovationSoundButton.addEventListener("click", async () => {
+    if (innovationVideo.muted) {
+      innovationVideo.muted = false;
+      innovationVideo.volume = 1;
+
+      try {
+        await innovationVideo.play();
+
+        innovationSoundIcon.textContent = "🔊";
+        innovationSoundText.textContent = "关闭声音";
+      } catch (error) {
+        innovationVideo.muted = true;
+
+        innovationSoundIcon.textContent = "🔇";
+        innovationSoundText.textContent = "开启声音";
+      }
+    } else {
+      innovationVideo.muted = true;
+
+      innovationSoundIcon.textContent = "🔇";
+      innovationSoundText.textContent = "开启声音";
+    }
+  });
+}
