@@ -93,3 +93,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+/* ROHI 官网 ICP 备案信息 */
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer-bottom");
+
+  if (!footer || footer.querySelector(".icp-record")) return;
+
+  const icp = document.createElement("p");
+  icp.className = "icp-record";
+
+  const link = document.createElement("a");
+  link.href = "https://beian.miit.gov.cn/";
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = "苏ICP备2026078341号-1";
+
+  icp.appendChild(link);
+  footer.appendChild(icp);
+});
